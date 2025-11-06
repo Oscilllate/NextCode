@@ -43,3 +43,43 @@ It was created as a mix of `Python`, `Swift`/`SwiftUI`, and `JavaScript`.
 1. **Code**: Open `nextscript.ns` and write your code.
 2. **Run**: Reload your web browser and the code you wrote should run.
 3. Check `builtins.nsh` for seeing built in functions.
+
+#### Syntax
+- **Function**:
+  ```
+  func <name>(<params>):
+      <code>
+  ~~~
+  ```
+- **Variable**: `<varName>` = `<someValue>`
+- **If/else if/else**:
+  ```
+  if condition:
+     <code>
+  end
+  else if condition:
+     <code>
+  end
+  else:
+     <code>
+  end
+  ```
+- **For**:
+  ```
+  for i in x..y:
+     <code>
+  end
+  for key of Object.keys(<someArray>):
+     <code>
+  end
+  ```
+  
+## Technology stack
+- **HTML5**: Base view
+- **NS1**: NextScript
+
+## Contributions
+Contributions are welcome! Please feel free to submit issues or pull requests.
+
+## License
+This project is open source and available under the MIT License.
