@@ -167,7 +167,10 @@ function parseHypToJS(nsCode, scope) {
 
         // 'end' or '~~~' closes current block
         if (trimmed === 'end' || trimmed === '~~~') {
-            if (indentStack.length) jsLines.push(' '.repeat(indentStack.pop()) + '}');
+            if (indentStack.length) {
+                const lastIndent = indentStack[indentStack.length - 1];
+                if (indent <= lastIndent) jsLines.push(' '.repeat(indentStack.pop()) + '}');
+            }
             continue;
         }
         
@@ -179,9 +182,19 @@ function parseHypToJS(nsCode, scope) {
             indentStack.push(indent);
             continue;
         }
-        if (trimmed.startsWith('case ')) {
-            const caseCall = trimmed.slice(5, trimmed.indexOf(':')).trim()
+        // Switch statement
+        if (trimmed.startsWith('switch ')) {
+            const expr = trimmed.slice(7).replace(/:$/, '').trim();
+            jsLines.push(`switch (${expr}) {`);
+            indentStack.push(indent);
+            continue;
         }
+        
+        if (trimmed.startsWith('case ') || trimmed.startsWith('default')) {
+            jsLines.push(trimmed); // just the line, no indentStack push
+            continue;
+        }
+        
         // For loop
         if (trimmed.startsWith('for ') && trimmed.includes(' of ')) {
             const forLine = trimmed.slice(4).replace(/:$/, '').trim();
