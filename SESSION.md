@@ -15,14 +15,18 @@ Project structure has been set up with core files created:
 **Latest Issues**
 - ✅ Issue #1: Parsing `for` loop issue
 - ✅ Issue #2: Parsing `if`/`else` loop issue
+- ✅ Case Issue: Parsing `case`, `switch` issue
 
 ## Issues identified
-
+- **DONE**: Case issue: Parsing `case`, `switch` issue
+  
 ### Critical issues (must fix)
 *none*
 
 ---
 ### Changelog:
 - **1.0.0**: Created main files and workspace
+- **1.0.1**: Bug fixes
   
-**Current Version**: `1.0.0`
+**Current Version**: `1.0.1` \
+**NS1**
