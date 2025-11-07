@@ -7,6 +7,7 @@ NextCode/
 ├── nextscript-loader.js
 ├── builtins.nsh
 ├── SESSION.md
+├── NextCode Tutorial.md
 └── README.md
 ```
 ## About
@@ -78,8 +79,10 @@ It was created as a mix of `Python`, `Swift`/`SwiftUI`, and `JavaScript`.
 - **HTML5**: Base view
 - **NS1**: NextScript
 
+### See `NextCode Tutorial.md` for more information
 ## Contributions
 Contributions are welcome! Please feel free to submit issues or pull requests.
 
 ## License
 This project is open source and available under the MIT License.
+
